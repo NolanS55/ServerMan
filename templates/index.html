@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='static.css') }}">
 </head>
 <body>
-    <p>ServerMan</p>
-    <form action = "/" method = "POST">  
-        <p>Run.bat Route: <input type = "text" name = "bat" /></p>
-        <p>PlayIt Route: <input type = "text" name = "playIt" /></p>
-        <p>Start Time: <input type = "text" name = "startTime" /></p>
-        <p>Stop Time: <input type = "text" name = "stopTime" /></p>
-        <p><input type = "submit" name="action" value = "Start" /></p>
-        <p><input type = "submit" name="action" value = "Stop" /></p>
-        <p><input type = "submit" name="action" value = "Schedule Start" /></p>
-        <p><input type = "submit" name="action" value = "Schedule Stop" /></p>
-     </form>
+    <div class="container">
+        <form action=""></form>
+        <p>Server Man</p>
+        <form action = "/" method = "POST">
+            <input type="text" id="path" name="path" placeholder="Path to create server">
+            <br>
+            <label for="eula">Do you agree to the Minecraft Eula</label>
+            <input type="checkbox" name="eula" id="eula" required>
+            <p><input type = "submit" name="action" value = "Create Server" /></p>
+         </form>
+    </div>
 </body>
 </html>
